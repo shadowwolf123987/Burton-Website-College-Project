@@ -1,35 +1,57 @@
-body {
+body 
+{
     background-color: #0b0c10;
 }
 
-.navbar-custom {
+.navbar-custom 
+{
     background-color: #1f2833;
 }
 
-.navbar-background {
+.navbar-background 
+{
     background-color: #677786;
 }
           
-.text-black {
+.text-black 
+{
     color: #66fcf1;
 }
 
-.nav-link {
+.nav-link 
+{
     padding-top: 17px;
 }
 
-.homeLogo {
+.homeLogo 
+{
     width: 60px;
     height: 60px;
     padding-right: 6px;
 }
 
-.dropdown {
+.dropdown 
+{
     padding-top: 14px;
     padding-right: 20px;
 }
 
-.btn-secondary {
+.btn-secondary 
+{
     color: #66fcf1;
     background-color: #1f2833;
+}
+
+.dropdown-menu {
+    background-color: #1f2833;
+}
+
+.dropdown-menu .dropdown-item
+{
+    color: #66fcf1;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    color: white;
+    background-color: #5A6268;
 }
