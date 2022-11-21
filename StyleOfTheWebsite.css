@@ -1,6 +1,6 @@
 body 
 {
-    background-color: #0b0c10;
+    background-color: #000000;
 }
 
 .navbar-custom 
@@ -54,4 +54,22 @@ body
 .dropdown-menu .dropdown-item:hover {
     color: white;
     background-color: #5A6268;
+}
+
+.questionLabels {
+    color: #66fcf1;
+    padding-top: 35px;
+    padding-left: 40%;
+    text-align: center;
+}
+
+.questionInput {
+    background-color: #4A5157;
+    color: #66fcf1;
+    margin-left: 40%;
+}
+
+.submitButton {
+    margin-top: 2%;
+    margin-left: 44%;
 }
