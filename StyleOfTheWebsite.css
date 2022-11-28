@@ -1,6 +1,7 @@
 body 
 {
-    background-color: #000000;
+    background-image: linear-gradient(0deg, rgb(34, 54, 99) 1%  , #1f2833 60%);
+    background-attachment: fixed;
 }
 
 .navbar-custom 
