@@ -71,5 +71,25 @@ body
 
 .submitButton {
     margin-top: 2%;
-    margin-left: 44%;
+    margin-left: 42.5%;
+}
+
+.results {
+    color:#66fcf1;
+    margin-left:44%;
+}
+
+.correct {
+    color:#176817;
+    margin-left:42%
+}
+
+.incorrect {
+    color: #B21308;
+    margin-left:42%;
+}
+
+.score {
+    color:#66fcf1;
+    margin-left:47%;
 }

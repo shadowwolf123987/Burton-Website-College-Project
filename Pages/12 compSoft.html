@@ -16,7 +16,7 @@
     <link rel="icon" type="image/x-icon" href="../Images/favicon.png">
 
 </head>
-<body>
+<<body>
 
     <div class="pos-f-t">
         <div class="collapse" id="navbarToggleExternalContent">
@@ -70,6 +70,220 @@
         </nav>
     </div>
 
+    <label class="questionLabels">
+        Question 1: ???
+    </label>
+    <br />
+    <input type="text" id="q1" class="questionInput">
+
+    <label class="questionLabels">
+        Question 2: ???
+    </label>
+    <br />
+    <input type="text" id="q2" class="questionInput">
+
+    <label class="questionLabels">
+        Question 3: ???
+    </label>
+    <br />
+    <input type="text" id="q3" class="questionInput">
+
+    <label class="questionLabels">
+        Question 4: ???
+    </label>
+    <br />
+    <input type="text" id="q4" class="questionInput">
+
+    <label class="questionLabels">
+        Question 5: ???
+    </label>
+    <br />
+    <input type="text" id="q5" class="questionInput">
+
+    <br>
+    <input type="button" name="submitButton" id="submitButtonID" class="submitButton" value="Submit" onclick="submitButtonClick();">
+
+    <input type="button" name="clearButton" id="clearButtonID" class="clearButton" value="Clear" onclick="clearButtonClick();">
+
+
+    <script>
+
+        let count = 0;
+        var submitClicked = false
+
+        let q1Answer = "INSERTANSWER";
+        let q2Answer = "INSERTANSWER";
+        let q3Answer = "INSERTANSWER";
+        let q4Answer = "INSERTANSWER";
+        let q5Answer = "INSERTANSWER";
+
+        let q1Correct = false
+        let q2Correct = false
+        let q3Correct = false
+        let q4Correct = false
+        let q5Correct = false
+
+        function submitButtonClick() {
+
+            let q1Input = document.getElementById("q1").value;
+            let q2Input = document.getElementById("q2").value;
+            let q3Input = document.getElementById("q3").value;
+            let q4Input = document.getElementById("q4").value;
+            let q5Input = document.getElementById("q5").value;
+
+            if (q1Input != "" && q2Input != "" && q3Input != "" && q4Input != "" && q5Input != "") {
+
+                if (submitClicked != true) {
+
+                    submitClicked = true
+
+                    var linebreak1 = document.createElement("br");
+                    document.getElementsByTagName('body')[0].appendChild(linebreak1);
+
+                    var linebreak2 = document.createElement("br");
+                    document.getElementsByTagName('body')[0].appendChild(linebreak2);
+
+                    var results = document.createElement('h4');
+                    var resultsNode = document.createTextNode("Results");
+                    results.appendChild(resultsNode)
+                    results.setAttribute("class", "results")
+                    document.getElementsByTagName('body')[0].appendChild(results);
+
+                    if (q1Input == q1Answer) {
+                        count++
+
+                        var q1Corr = document.createElement('p');
+                        var q1CorrNode = document.createTextNode("Question 1 Correct");
+                        q1Corr.appendChild(q1CorrNode)
+                        q1Corr.setAttribute("class", "correct")
+                        document.getElementsByTagName('body')[0].appendChild(q1Corr);
+
+                    }
+
+                    if (q1Input != q1Answer) {
+                        var q1Inc = document.createElement('p');
+                        var q1IncNode = document.createTextNode("Question 1 Incorrect");
+                        q1Inc.appendChild(q1IncNode)
+                        q1Inc.setAttribute("class", "incorrect")
+                        document.getElementsByTagName('body')[0].appendChild(q1Inc);
+                    }
+
+                    if (q2Input == q2Answer) {
+                        count++
+
+                        var q2Corr = document.createElement('p');
+                        var q2CorrNode = document.createTextNode("Question 2 Correct");
+                        q2Corr.appendChild(q2CorrNode)
+                        q2Corr.setAttribute("class", "correct")
+                        document.getElementsByTagName('body')[0].appendChild(q2Corr);
+
+                    }
+
+                    if (q2Input != q2Answer) {
+                        var q2Inc = document.createElement('p');
+                        var q2IncNode = document.createTextNode("Question 2 Incorrect");
+                        q2Inc.appendChild(q2IncNode)
+                        q2Inc.setAttribute("class", "incorrect")
+                        document.getElementsByTagName('body')[0].appendChild(q2Inc);
+                    }
+
+                    if (q3Input == q3Answer) {
+                        count++
+
+                        var q3Corr = document.createElement('p');
+                        var q3CorrNode = document.createTextNode("Question 3 Correct");
+                        q3Corr.appendChild(q3CorrNode)
+                        q3Corr.setAttribute("class", "correct")
+                        document.getElementsByTagName('body')[0].appendChild(q3Corr);
+
+                    }
+
+                    if (q3Input != q3Answer) {
+                        var q3Inc = document.createElement('p');
+                        var q3IncNode = document.createTextNode("Question 3 Incorrect");
+                        q3Inc.appendChild(q3IncNode)
+                        q3Inc.setAttribute("class", "incorrect")
+                        document.getElementsByTagName('body')[0].appendChild(q3Inc);
+                    }
+
+                    if (q4Input == q4Answer) {
+                        count++
+
+                        var q4Corr = document.createElement('p');
+                        var q4CorrNode = document.createTextNode("Question 4 Correct");
+                        q4Corr.appendChild(q4CorrNode)
+                        q4Corr.setAttribute("class", "correct")
+                        document.getElementsByTagName('body')[0].appendChild(q4Corr);
+
+                    }
+
+                    if (q4Input != q4Answer) {
+                        var q4Inc = document.createElement('p');
+                        var q4IncNode = document.createTextNode("Question 4 Incorrect");
+                        q4Inc.appendChild(q4IncNode)
+                        q4Inc.setAttribute("class", "incorrect")
+                        document.getElementsByTagName('body')[0].appendChild(q4Inc);
+                    }
+
+                    if (q5Input == q5Answer) {
+                        count++
+
+                        var q5Corr = document.createElement('p');
+                        var q5CorrNode = document.createTextNode("Question 5 Correct");
+                        q5Corr.appendChild(q5CorrNode)
+                        q5Corr.setAttribute("class", "correct")
+                        document.getElementsByTagName('body')[0].appendChild(q5Corr);
+
+                    }
+
+                    if (q5Input != q5Answer) {
+                        var q5Inc = document.createElement('p');
+                        var q5IncNode = document.createTextNode("Question 5 Incorrect");
+                        q5Inc.appendChild(q5IncNode)
+                        q5Inc.setAttribute("class", "incorrect")
+                        document.getElementsByTagName('body')[0].appendChild(q5Inc);
+
+                        var score = document.createElement('p');
+                        var scoreNode = document.createTextNode(count + "/5");
+                        score.appendChild(scoreNode)
+                        score.setAttribute("class", "score")
+                        document.getElementsByTagName('body')[0].appendChild(score);
+
+                    }
+
+                }
+            }
+
+        };
+
+        function clearButtonClick() {
+
+            const resultsdel = document.getElementsByClassName("results")
+            const correctdel = document.getElementsByClassName("correct")
+            const incorrectdel = document.getElementsByClassName("incorrect")
+            const scoredel = document.getElementsByClassName("score")
+
+            while (resultsdel.length > 0) {
+                resultsdel[0].parentNode.removeChild(resultsdel[0]);
+            };
+
+            while (correctdel.length > 0) {
+                correctdel[0].parentNode.removeChild(correctdel[0]);
+            };
+
+            while (incorrectdel.length > 0) {
+                incorrectdel[0].parentNode.removeChild(incorrectdel[0]);
+            };
+
+            while (scoredel.length > 0) {
+                scoredel[0].parentNode.removeChild(scoredel[0]);
+            };
+
+            submitClicked = false
+
+        };
+
+    </script>
 
 </body>
 </html>
