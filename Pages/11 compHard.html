@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="../StyleOfTheWebsite.css">
-    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.png">
 
 </head>
 <body>
@@ -86,22 +86,56 @@
         Question 3: ???
     </label>
     <br />
-    <input type="text" id="q1" class="questionInput">
+    <input type="text" id="q3" class="questionInput">
 
     <label class="questionLabels">
         Question 4: ???
     </label>
     <br />
-    <input type="text" id="q2" class="questionInput">
+    <input type="text" id="q4" class="questionInput">
 
     <label class="questionLabels">
         Question 5: ???
     </label>
     <br />
-    <input type="text" id="q2" class="questionInput">
+    <input type="text" id="q5" class="questionInput">
 
     <br>
-    <input type="submit" class="submitButton">
+    <input type="button" name="submitButton" id="submitButtonID" class="submitButton" value="SUBMIT" onclick="">
+
+    <script>
+
+        function submitButtonClick() {
+
+            window.alert("test1");
+            if (q1Input == q1Answer) {
+
+                window.alert("test2")
+                var q1AnswerBox = document.createElement("Label");
+                q1AnswerBox.innerHTML = q1Answer;
+                parentDiv.appendChild(q1AnswerBox);
+
+            };
+
+        }
+
+        var count = 0
+
+        let q1Input = document.getElementById("q1").value;
+        let q2Input = document.getElementById("q2").value;
+        let q3Input = document.getElementById("q3").value;
+        let q4Input = document.getElementById("q4").value;
+        let q5Input = document.getElementById("q5").value;
+
+        let q1Answer = "test";
+        let q2Answer = "";
+        let q3Answer = "";
+        let q4Answer = "";
+        let q5Answer = "";
+
+        document.getElementById('submitButtonID').addEventListener("click", submitButtonClick());
+
+    </script>
 
 </body>
 </html>
