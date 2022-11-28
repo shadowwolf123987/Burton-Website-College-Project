@@ -101,39 +101,160 @@
     <input type="text" id="q5" class="questionInput">
 
     <br>
-    <input type="button" name="submitButton" id="submitButtonID" class="submitButton" value="SUBMIT" onclick="">
+    <input type="button" name="submitButton" id="submitButtonID" class="submitButton" value="SUBMIT" onclick="submitButtonClick();">
 
     <script>
 
-        function submitButtonClick() {
+        let count = 0;
+        var clicked = false
 
-            window.alert("test1");
-            if (q1Input == q1Answer) {
-
-                window.alert("test2")
-                var q1AnswerBox = document.createElement("Label");
-                q1AnswerBox.innerHTML = q1Answer;
-                parentDiv.appendChild(q1AnswerBox);
-
-            };
-
-        }
-
-        var count = 0
-
-        let q1Input = document.getElementById("q1").value;
-        let q2Input = document.getElementById("q2").value;
-        let q3Input = document.getElementById("q3").value;
-        let q4Input = document.getElementById("q4").value;
-        let q5Input = document.getElementById("q5").value;
-
-        let q1Answer = "test";
+        let q1Answer = "";
         let q2Answer = "";
         let q3Answer = "";
         let q4Answer = "";
         let q5Answer = "";
 
-        document.getElementById('submitButtonID').addEventListener("click", submitButtonClick());
+        let q1Correct = false
+        let q2Correct = false
+        let q3Correct = false
+        let q4Correct = false
+        let q5Correct = false
+
+        function submitButtonClick() {
+
+            let q1Input = document.getElementById("q1").value;
+            let q2Input = document.getElementById("q2").value;
+            let q3Input = document.getElementById("q3").value;
+            let q4Input = document.getElementById("q4").value;
+            let q5Input = document.getElementById("q5").value;
+
+            if (q1Input != "" && q2Input != "" && q3Input != "" && q4Input != "" && q5Input != "" ) {
+
+                if (clicked != true) {
+
+                    clicked = true
+
+                    window.alert(q1Input,q2Input,q3Input,q4Input,q5Input)
+
+                    var linebreak1 = document.createElement("br");
+                    document.getElementsByTagName('body')[0].appendChild(linebreak1);
+
+                    var linebreak2 = document.createElement("br");
+                    document.getElementsByTagName('body')[0].appendChild(linebreak2);
+
+                    var results = document.createElement('label');
+                    results.innerHTML = "Results";
+                    results.style.color = "#66fcf1";
+                    results.style.marginLeft = "45%";
+                    document.getElementsByTagName('body')[0].appendChild(results);
+
+                    var linebreak3 = document.createElement("br");
+                    document.getElementsByTagName('body')[0].appendChild(linebreak3);
+
+                    if (q1Input == q1Answer) {
+                        q1Correct = true
+                        count++
+
+                        var q1Corr = document.createElement('label');
+                        results.innerHTML = "Question 1 Correct";
+                        results.style.color = "#176817";
+                        results.style.marginLeft = "45%";
+                        document.getElementsByTagName('body')[0].appendChild(q1Corr);
+
+                    }
+
+                    if (q1Input != q1Answer) {
+                        var q1Inc = document.createElement('label');
+                        results.innerHTML = "Question 1 Incorrect";
+                        results.style.color = "#970902";
+                        results.style.marginLeft = "45%";
+                        document.getElementsByTagName('body')[0].appendChild(q1Inc);
+                    }
+
+                    if (q2Input == q2Answer) {
+                        q2Correct = true
+                        count++
+
+                        var q2Corr = document.createElement('label');
+                        results.innerHTML = "Question 2 Correct";
+                        results.style.color = "#176817";
+                        results.style.marginLeft = "45%";
+                        document.getElementsByTagName('body')[0].appendChild(q2Corr);
+
+                    }
+
+                    if (q2Input != q2Answer) {
+                        var q2Inc = document.createElement('label');
+                        results.innerHTML = "Question 2 Incorrect";
+                        results.style.color = "#970902";
+                        results.style.marginLeft = "45%";
+                        document.getElementsByTagName('body')[0].appendChild(q2Inc);
+                    }
+
+                    if (q3Input == q3Answer) {
+                        q3Correct = true
+                        count++
+
+                        var q3Corr = document.createElement('label');
+                        results.innerHTML = "Question 3 Correct";
+                        results.style.color = "#176817";
+                        results.style.marginLeft = "45%";
+                        document.getElementsByTagName('body')[0].appendChild(q3Corr);
+
+                    }
+
+                    if (q3Input != q3Answer) {
+                        var q3Inc = document.createElement('label');
+                        results.innerHTML = "Question 3 Incorrect";
+                        results.style.color = "#970902";
+                        results.style.marginLeft = "45%";
+                        document.getElementsByTagName('body')[0].appendChild(q3Inc);
+                    }
+
+                    if (q4Input == q4Answer) {
+                        q4Correct = true
+                        count++
+
+                        var q4Corr = document.createElement('label');
+                        results.innerHTML = "Question 4 Correct";
+                        results.style.color = "#176817";
+                        results.style.marginLeft = "45%";
+                        document.getElementsByTagName('body')[0].appendChild(q4Corr);
+
+                    }
+
+                    if (q4Input != q4Answer) {
+                        var q4Inc = document.createElement('label');
+                        results.innerHTML = "Question 4 Incorrect";
+                        results.style.color = "#970902";
+                        results.style.marginLeft = "45%";
+                        document.getElementsByTagName('body')[0].appendChild(q4Inc);
+                    }
+
+                    if (q5Input == q5Answer) {
+                        q5Correct = true
+                        count++
+
+                        var q5Corr = document.createElement('label');
+                        results.innerHTML = "Question 5 Correct";
+                        results.style.color = "#176817";
+                        results.style.marginLeft = "45%";
+                        document.getElementsByTagName('body')[0].appendChild(q5Corr);
+
+                    }
+
+                    if (q5Input != q5Answer) {
+                        var q5Inc = document.createElement('label');
+                        results.innerHTML = "Question 5 Incorrect";
+                        results.style.color = "#970902";
+                        results.style.marginLeft = "45%";
+                        document.getElementsByTagName('body')[0].appendChild(q5Inc);
+                    }
+
+                }
+            }
+
+        };
 
     </script>
 
