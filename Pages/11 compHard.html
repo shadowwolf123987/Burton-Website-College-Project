@@ -101,18 +101,18 @@
     <input type="text" id="q5" class="questionInput">
 
     <br>
-    <input type="button" name="submitButton" id="submitButtonID" class="submitButton" value="SUBMIT" onclick="submitButtonClick();">
+    <input type="button" name="submitButton" id="submitButtonID" class="submitButton" value="Submit" onclick="submitButtonClick();">
 
     <script>
 
         let count = 0;
-        var clicked = false
+        var submitClicked = false
 
-        let q1Answer = "";
-        let q2Answer = "";
-        let q3Answer = "";
-        let q4Answer = "";
-        let q5Answer = "";
+        let q1Answer = "INSERTANSWER";
+        let q2Answer = "INSERTANSWER";
+        let q3Answer = "INSERTANSWER";
+        let q4Answer = "INSERTANSWER";
+        let q5Answer = "INSERTANSWER";
 
         let q1Correct = false
         let q2Correct = false
@@ -130,11 +130,9 @@
 
             if (q1Input != "" && q2Input != "" && q3Input != "" && q4Input != "" && q5Input != "" ) {
 
-                if (clicked != true) {
+                if (submitClicked != true) {
 
-                    clicked = true
-
-                    window.alert(q1Input,q2Input,q3Input,q4Input,q5Input)
+                    submitClicked = true
 
                     var linebreak1 = document.createElement("br");
                     document.getElementsByTagName('body')[0].appendChild(linebreak1);
@@ -142,32 +140,32 @@
                     var linebreak2 = document.createElement("br");
                     document.getElementsByTagName('body')[0].appendChild(linebreak2);
 
-                    var results = document.createElement('label');
-                    results.innerHTML = "Results";
+                    var results = document.createElement('h4');
+                    var resultsNode = document.createTextNode("Results");
+                    results.appendChild(resultsNode)
                     results.style.color = "#66fcf1";
-                    results.style.marginLeft = "45%";
+                    results.style.marginLeft = "44%";
                     document.getElementsByTagName('body')[0].appendChild(results);
-
-                    var linebreak3 = document.createElement("br");
-                    document.getElementsByTagName('body')[0].appendChild(linebreak3);
 
                     if (q1Input == q1Answer) {
                         q1Correct = true
                         count++
 
-                        var q1Corr = document.createElement('label');
-                        results.innerHTML = "Question 1 Correct";
-                        results.style.color = "#176817";
-                        results.style.marginLeft = "45%";
+                        var q1Corr = document.createElement('p');
+                        var q1CorrNode = document.createTextNode("Question 1 Correct");
+                        q1Corr.appendChild(q1CorrNode)
+                        q1Corr.style.color = "#176817";
+                        q1Corr.style.marginLeft = "42%";
                         document.getElementsByTagName('body')[0].appendChild(q1Corr);
 
                     }
 
                     if (q1Input != q1Answer) {
-                        var q1Inc = document.createElement('label');
-                        results.innerHTML = "Question 1 Incorrect";
-                        results.style.color = "#970902";
-                        results.style.marginLeft = "45%";
+                        var q1Inc = document.createElement('p');
+                        var q1IncNode = document.createTextNode("Question 1 Incorrect");
+                        q1Inc.appendChild(q1IncNode)
+                        q1Inc.style.color = "#B21308";
+                        q1Inc.style.marginLeft = "42%";
                         document.getElementsByTagName('body')[0].appendChild(q1Inc);
                     }
 
@@ -175,19 +173,21 @@
                         q2Correct = true
                         count++
 
-                        var q2Corr = document.createElement('label');
-                        results.innerHTML = "Question 2 Correct";
-                        results.style.color = "#176817";
-                        results.style.marginLeft = "45%";
+                        var q2Corr = document.createElement('p');
+                        var q2CorrNode = document.createTextNode("Question 2 Correct");
+                        q2Corr.appendChild(q2CorrNode)
+                        q2Corr.style.color = "#176817";
+                        q2Corr.style.marginLeft = "42%";
                         document.getElementsByTagName('body')[0].appendChild(q2Corr);
 
                     }
 
                     if (q2Input != q2Answer) {
-                        var q2Inc = document.createElement('label');
-                        results.innerHTML = "Question 2 Incorrect";
-                        results.style.color = "#970902";
-                        results.style.marginLeft = "45%";
+                        var q2Inc = document.createElement('p');
+                        var q2IncNode = document.createTextNode("Question 2 Incorrect");
+                        q2Inc.appendChild(q2IncNode)
+                        q2Inc.style.color = "#B21308";
+                        q2Inc.style.marginLeft = "42%";
                         document.getElementsByTagName('body')[0].appendChild(q2Inc);
                     }
 
@@ -195,19 +195,21 @@
                         q3Correct = true
                         count++
 
-                        var q3Corr = document.createElement('label');
-                        results.innerHTML = "Question 3 Correct";
-                        results.style.color = "#176817";
-                        results.style.marginLeft = "45%";
+                        var q3Corr = document.createElement('p');
+                        var q3CorrNode = document.createTextNode("Question 3 Correct");
+                        q3Corr.appendChild(q3CorrNode)
+                        q3Corr.style.color = "#176817";
+                        q3Corr.style.marginLeft = "42%";
                         document.getElementsByTagName('body')[0].appendChild(q3Corr);
 
                     }
 
                     if (q3Input != q3Answer) {
-                        var q3Inc = document.createElement('label');
-                        results.innerHTML = "Question 3 Incorrect";
-                        results.style.color = "#970902";
-                        results.style.marginLeft = "45%";
+                        var q3Inc = document.createElement('p');
+                        var q3IncNode = document.createTextNode("Question 3 Incorrect");
+                        q3Inc.appendChild(q3IncNode)
+                        q3Inc.style.color = "#B21308";
+                        q3Inc.style.marginLeft = "42%";
                         document.getElementsByTagName('body')[0].appendChild(q3Inc);
                     }
 
@@ -215,19 +217,21 @@
                         q4Correct = true
                         count++
 
-                        var q4Corr = document.createElement('label');
-                        results.innerHTML = "Question 4 Correct";
-                        results.style.color = "#176817";
-                        results.style.marginLeft = "45%";
+                        var q4Corr = document.createElement('p');
+                        var q4CorrNode = document.createTextNode("Question 4 Correct");
+                        q4Corr.appendChild(q4CorrNode)
+                        q4Corr.style.color = "#176817";
+                        q4Corr.style.marginLeft = "42%";
                         document.getElementsByTagName('body')[0].appendChild(q4Corr);
 
                     }
 
                     if (q4Input != q4Answer) {
-                        var q4Inc = document.createElement('label');
-                        results.innerHTML = "Question 4 Incorrect";
-                        results.style.color = "#970902";
-                        results.style.marginLeft = "45%";
+                        var q4Inc = document.createElement('p');
+                        var q4IncNode = document.createTextNode("Question 4 Incorrect");
+                        q4Inc.appendChild(q4IncNode)
+                        q4Inc.style.color = "#B21308";
+                        q4Inc.style.marginLeft = "42%";
                         document.getElementsByTagName('body')[0].appendChild(q4Inc);
                     }
 
@@ -235,24 +239,40 @@
                         q5Correct = true
                         count++
 
-                        var q5Corr = document.createElement('label');
-                        results.innerHTML = "Question 5 Correct";
-                        results.style.color = "#176817";
-                        results.style.marginLeft = "45%";
+                        var q5Corr = document.createElement('p');
+                        var q5CorrNode = document.createTextNode("Question 5 Correct");
+                        q5Corr.appendChild(q5CorrNode)
+                        q5Corr.style.color = "#176817";
+                        q5Corr.style.marginLeft = "42%";
                         document.getElementsByTagName('body')[0].appendChild(q5Corr);
 
                     }
 
                     if (q5Input != q5Answer) {
-                        var q5Inc = document.createElement('label');
-                        results.innerHTML = "Question 5 Incorrect";
-                        results.style.color = "#970902";
-                        results.style.marginLeft = "45%";
+                        var q5Inc = document.createElement('p');
+                        var q5IncNode = document.createTextNode("Question 5 Incorrect");
+                        q5Inc.appendChild(q5IncNode)
+                        q5Inc.style.color = "#B21308";
+                        q5Inc.style.marginLeft = "42%";
                         document.getElementsByTagName('body')[0].appendChild(q5Inc);
+
+                    var num = document.createElement('p');
+                    var numNode = document.createTextNode(count+"/5");
+                    num.appendChild(numNode)
+                    num.style.color = "#66fcf1";
+                    num.style.marginLeft = "47%";
+                    document.getElementsByTagName('body')[0].appendChild(num);
+
                     }
 
                 }
             }
+
+        };
+
+        function clearButtonClick() {
+
+
 
         };
 
