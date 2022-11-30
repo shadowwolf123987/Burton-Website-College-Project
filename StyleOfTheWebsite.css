@@ -94,3 +94,26 @@ body
     color:#66fcf1;
     margin-left:47%;
 }
+
+.btn-primary {
+    color: #66fcf1;
+    background-color: #1f2833;
+    padding: 7px;
+    padding-left: 9px;
+    padding-right: 9px;
+    border-style: solid;
+    border-radius: 4px;
+    border-color: grey;
+    border-width: 1px;
+}
+
+.btn-primary:hover {
+        color: white;
+        background-color: #5A6268;
+        border-width: 0px;
+        text-decoration-line: none;
+}
+
+.nav-aboutPage {
+    margin-top: 21px;
+}
