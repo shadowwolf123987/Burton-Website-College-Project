@@ -76,31 +76,31 @@
     </div>
 
     <label class="questionLabels">
-        Question 1: ???
+        Question 1: Enter one holder of Information
     </label>
     <br />
     <input type="text" id="q1" class="questionInput">
 
     <label class="questionLabels">
-        Question 2: ???
+        Question 2: Enter an Access/Storage device
     </label>
     <br />
     <input type="text" id="q2" class="questionInput">
 
     <label class="questionLabels">
-        Question 3: ???
+        Question 3: Input one type of storage media
     </label>
     <br />
     <input type="text" id="q3" class="questionInput">
 
     <label class="questionLabels">
-        Question 4: ???
+        Question 4: Input one information format
     </label>
     <br />
     <input type="text" id="q4" class="questionInput">
 
     <label class="questionLabels">
-        Question 5: ???
+        Question 5: Enter a type of WWW Internet Technology
     </label>
     <br />
     <input type="text" id="q5" class="questionInput">
@@ -116,11 +116,11 @@
         let count = 0;
         var submitClicked = false
 
-        let q1Answer = "INSERTANSWER";
-        let q2Answer = "INSERTANSWER";
-        let q3Answer = "INSERTANSWER";
-        let q4Answer = "INSERTANSWER";
-        let q5Answer = "INSERTANSWER";
+        let q1Answer = ["business","businesses","government","individual","individuals","individual citizen","education","charity","healthcare","community","charity and community"];
+        let q2Answer = ["handheld","portable","fixed","shared"];
+        let q3Answer = ["magnetic","optical","paper","solid state","solid state drive"];
+        let q4Answer = ["web pages","web page","blogs","podcasts","streamed audio and media","social media channels","social media","emails","document stores","rss feeds"];
+        let q5Answer = ["internet","intranet","extranet"];
 
         let q1Correct = false
         let q2Correct = false
@@ -154,7 +154,7 @@
                     results.setAttribute("class", "results")
                     document.getElementsByTagName('body')[0].appendChild(results);
 
-                    if (q1Input == q1Answer) {
+                    if (q1Answer.includes(q1Input.toLowerCase())) {
                         count++
 
                         var q1Corr = document.createElement('p');
@@ -165,7 +165,7 @@
 
                     }
 
-                    if (q1Input != q1Answer) {
+                    if (!q1Answer.includes(q1Input.toLowerCase())) {
                         var q1Inc = document.createElement('p');
                         var q1IncNode = document.createTextNode("Question 1 Incorrect");
                         q1Inc.appendChild(q1IncNode)
@@ -173,7 +173,7 @@
                         document.getElementsByTagName('body')[0].appendChild(q1Inc);
                     }
 
-                    if (q2Input == q2Answer) {
+                    if (q2Answer.includes(q2Input.toLowerCase())) {
                         count++
 
                         var q2Corr = document.createElement('p');
@@ -184,7 +184,7 @@
 
                     }
 
-                    if (q2Input != q2Answer) {
+                    if (!q2Answer.includes(q2Input.toLowerCase())) {
                         var q2Inc = document.createElement('p');
                         var q2IncNode = document.createTextNode("Question 2 Incorrect");
                         q2Inc.appendChild(q2IncNode)
@@ -192,7 +192,7 @@
                         document.getElementsByTagName('body')[0].appendChild(q2Inc);
                     }
 
-                    if (q3Input == q3Answer) {
+                    if (q3Answer.includes(q3Input.toLowerCase())) {
                         count++
 
                         var q3Corr = document.createElement('p');
@@ -203,7 +203,7 @@
 
                     }
 
-                    if (q3Input != q3Answer) {
+                    if (!q3Answer.includes(q3Input.toLowerCase())) {
                         var q3Inc = document.createElement('p');
                         var q3IncNode = document.createTextNode("Question 3 Incorrect");
                         q3Inc.appendChild(q3IncNode)
@@ -211,7 +211,7 @@
                         document.getElementsByTagName('body')[0].appendChild(q3Inc);
                     }
 
-                    if (q4Input == q4Answer) {
+                    if (q4Answer.includes(q4Input.toLowerCase())) {
                         count++
 
                         var q4Corr = document.createElement('p');
@@ -222,7 +222,7 @@
 
                     }
 
-                    if (q4Input != q4Answer) {
+                    if (!q4Answer.includes(q4Input.toLowerCase())) {
                         var q4Inc = document.createElement('p');
                         var q4IncNode = document.createTextNode("Question 4 Incorrect");
                         q4Inc.appendChild(q4IncNode)
@@ -230,7 +230,7 @@
                         document.getElementsByTagName('body')[0].appendChild(q4Inc);
                     }
 
-                    if (q5Input == q5Answer) {
+                    if (q5Answer.includes(q5Input.toLowerCase())) {
                         count++
 
                         var q5Corr = document.createElement('p');
@@ -241,7 +241,7 @@
 
                     }
 
-                    if (q5Input != q5Answer) {
+                    if (!q5Answer.includes(q5Input.toLowerCase())) {
                         var q5Inc = document.createElement('p');
                         var q5IncNode = document.createTextNode("Question 5 Incorrect");
                         q5Inc.appendChild(q5IncNode)
