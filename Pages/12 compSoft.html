@@ -116,11 +116,11 @@
         let count = 0;
         var submitClicked = false
 
-        let q1Answer = ["code is editable and viewable","code is viewable and editable","code is editable","code is viewable","editable and viewable","editable","viewable","editable code","viewable code","editable and viewable code","viewable and editable code","anyone can edit it"];
-        let q2Answer = ["no","single-use","single use","one use","one-use","usually not","rarely","normally not"];
-        let q3Answer = ["maintenance and organisation", "maintenance and organisation of a computer system", "maintenance", "organisation", "used for maintenance and organisation", "maintenance of the computer system", "maintenance of a computer system", "organisation of the computer system","organisation of a computer systen"];
-        let q4Answer = ["secure","hyper text transfer protocol secure"];
-        let q5Answer = ["letter","texting","texts","text","sms","text message","email","emails","mail","im","instant messaging"];
+        let q1Answer = ["viewable","edit","modify","modifiable"];
+        let q2Answer = ["no","single-use","single use","one use","one-use","not","rarely"];
+        let q3Answer = ["maintenance", "organisation","maintaining","organising"];
+        let q4Answer = ["secure"];
+        let q5Answer = ["letter","text","sms","mail","im","messaging"];
 
         let q1Correct = false
         let q2Correct = false
@@ -154,18 +154,21 @@
                     results.setAttribute("class", "results")
                     document.getElementsByTagName('body')[0].appendChild(results);
 
-                    if (q1Answer.includes(q1Input.toLowerCase())) {
-                        count++
+                    for (var i = 0; i < q1Answer.length; i++) {
+                        if ((q1Input.toLowerCase()).includes(q1Answer[i])) {
+                            count++
+                            q1Correct = true
 
-                        var q1Corr = document.createElement('p');
-                        var q1CorrNode = document.createTextNode("Question 1 Correct");
-                        q1Corr.appendChild(q1CorrNode)
-                        q1Corr.setAttribute("class", "correct")
-                        document.getElementsByTagName('body')[0].appendChild(q1Corr);
-
+                            var q1Corr = document.createElement('p');
+                            var q1CorrNode = document.createTextNode("Question 1 Correct");
+                            q1Corr.appendChild(q1CorrNode)
+                            q1Corr.setAttribute("class", "correct")
+                            document.getElementsByTagName('body')[0].appendChild(q1Corr);
+                            break
+                        }
                     }
 
-                    if (!q1Answer.includes(q1Input.toLowerCase())) {
+                    if (q1Correct == false) {
                         var q1Inc = document.createElement('p');
                         var q1IncNode = document.createTextNode("Question 1 Incorrect");
                         q1Inc.appendChild(q1IncNode)
@@ -173,18 +176,21 @@
                         document.getElementsByTagName('body')[0].appendChild(q1Inc);
                     }
 
-                    if (q2Answer.includes(q2Input.toLowerCase())) {
-                        count++
+                    for (var i = 0; i < q2Answer.length; i++) {
+                        if ((q2Input.toLowerCase()).includes(q2Answer[i])) {
+                            count++
+                            q2Correct = true
 
-                        var q2Corr = document.createElement('p');
-                        var q2CorrNode = document.createTextNode("Question 2 Correct");
-                        q2Corr.appendChild(q2CorrNode)
-                        q2Corr.setAttribute("class", "correct")
-                        document.getElementsByTagName('body')[0].appendChild(q2Corr);
-
+                            var q2Corr = document.createElement('p');
+                            var q2CorrNode = document.createTextNode("Question 2 Correct");
+                            q2Corr.appendChild(q2CorrNode)
+                            q2Corr.setAttribute("class", "correct")
+                            document.getElementsByTagName('body')[0].appendChild(q2Corr);
+                            break
+                        }
                     }
 
-                    if (!q2Answer.includes(q2Input.toLowerCase())) {
+                    if (q2Correct == false) {
                         var q2Inc = document.createElement('p');
                         var q2IncNode = document.createTextNode("Question 2 Incorrect");
                         q2Inc.appendChild(q2IncNode)
@@ -192,18 +198,21 @@
                         document.getElementsByTagName('body')[0].appendChild(q2Inc);
                     }
 
-                    if (q3Answer.includes(q3Input.toLowerCase())) {
-                        count++
+                    for (var i = 0; i < q3Answer.length; i++) {
+                        if ((q3Input.toLowerCase()).includes(q3Answer[i])) {
+                            count++
+                            q3Correct = true
 
-                        var q3Corr = document.createElement('p');
-                        var q3CorrNode = document.createTextNode("Question 3 Correct");
-                        q3Corr.appendChild(q3CorrNode)
-                        q3Corr.setAttribute("class", "correct")
-                        document.getElementsByTagName('body')[0].appendChild(q3Corr);
-
+                            var q3Corr = document.createElement('p');
+                            var q3CorrNode = document.createTextNode("Question 3 Correct");
+                            q3Corr.appendChild(q3CorrNode)
+                            q3Corr.setAttribute("class", "correct")
+                            document.getElementsByTagName('body')[0].appendChild(q3Corr);
+                            break
+                        }
                     }
 
-                    if (!q3Answer.includes(q3Input.toLowerCase())) {
+                    if (q3Correct == false) {
                         var q3Inc = document.createElement('p');
                         var q3IncNode = document.createTextNode("Question 3 Incorrect");
                         q3Inc.appendChild(q3IncNode)
@@ -211,18 +220,21 @@
                         document.getElementsByTagName('body')[0].appendChild(q3Inc);
                     }
 
-                    if (q4Answer.includes(q4Input.toLowerCase())) {
-                        count++
+                    for (var i = 0; i < q4Answer.length; i++) {
+                        if ((q4Input.toLowerCase()).includes(q4Answer[i])) {
+                            count++
+                            q4Correct = true
 
-                        var q4Corr = document.createElement('p');
-                        var q4CorrNode = document.createTextNode("Question 4 Correct");
-                        q4Corr.appendChild(q4CorrNode)
-                        q4Corr.setAttribute("class", "correct")
-                        document.getElementsByTagName('body')[0].appendChild(q4Corr);
-
+                            var q4Corr = document.createElement('p');
+                            var q4CorrNode = document.createTextNode("Question 4 Correct");
+                            q4Corr.appendChild(q4CorrNode)
+                            q4Corr.setAttribute("class", "correct")
+                            document.getElementsByTagName('body')[0].appendChild(q4Corr);
+                            break
+                        }
                     }
 
-                    if (!q4Answer.includes(q4Input.toLowerCase())) {
+                    if (q4Correct == false) {
                         var q4Inc = document.createElement('p');
                         var q4IncNode = document.createTextNode("Question 4 Incorrect");
                         q4Inc.appendChild(q4IncNode)
@@ -230,30 +242,26 @@
                         document.getElementsByTagName('body')[0].appendChild(q4Inc);
                     }
 
-                    if (q5Answer.includes(q5Input.toLowerCase())) {
-                        count++
+                    for (var i = 0; i < q5Answer.length; i++) {
+                        if ((q5Input.toLowerCase()).includes(q5Answer[i])) {
+                            count++
+                            q5Correct = true
 
-                        var q5Corr = document.createElement('p');
-                        var q5CorrNode = document.createTextNode("Question 5 Correct");
-                        q5Corr.appendChild(q5CorrNode)
-                        q5Corr.setAttribute("class", "correct")
-                        document.getElementsByTagName('body')[0].appendChild(q5Corr);
-
+                            var q5Corr = document.createElement('p');
+                            var q5CorrNode = document.createTextNode("Question 5 Correct");
+                            q5Corr.appendChild(q5CorrNode)
+                            q5Corr.setAttribute("class", "correct")
+                            document.getElementsByTagName('body')[0].appendChild(q5Corr);
+                            break
+                        }
                     }
 
-                    if (!q5Answer.includes(q5Input.toLowerCase())) {
+                    if (q5Correct == false) {
                         var q5Inc = document.createElement('p');
                         var q5IncNode = document.createTextNode("Question 5 Incorrect");
                         q5Inc.appendChild(q5IncNode)
                         q5Inc.setAttribute("class", "incorrect")
                         document.getElementsByTagName('body')[0].appendChild(q5Inc);
-
-                        var score = document.createElement('p');
-                        var scoreNode = document.createTextNode(count + "/5");
-                        score.appendChild(scoreNode)
-                        score.setAttribute("class", "score")
-                        document.getElementsByTagName('body')[0].appendChild(score);
-
                     }
 
                 }
