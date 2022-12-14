@@ -53,6 +53,7 @@ body
 .dropdown-menu .dropdown-item
 {
     color: #66fcf1;
+    font-family: "Raleway", sans-serif;
 }
 
 .dropdown-menu .dropdown-item:hover {
@@ -77,26 +78,29 @@ body
 .submitButton {
     margin-top: 2%;
     margin-left: 42.5%;
+    font-family: "Raleway", sans-serif;
 }
 
 .results {
-    color:#66fcf1;
-    margin-left:44%;
+    color: #66fcf1;
+    margin-left: 44%;
+    font-family: "Raleway", sans-serif;
 }
 
 .correct {
     color:#176817;
-    margin-left:42%
+    margin-left: 42%;
 }
 
 .incorrect {
     color: #B21308;
-    margin-left:42%;
+    margin-left: 42%;
 }
 
 .score {
-    color:#66fcf1;
-    margin-left:47%;
+    color: #66fcf1;
+    margin-left: 47%;
+    font-family: "Raleway", sans-serif;
 }
 
 .btn-primary {
@@ -120,5 +124,9 @@ body
 
 .nav-aboutPage {
     margin-top: 21px;
+    font-family: "Raleway", sans-serif;
+}
+
+.clearButton {
     font-family: "Raleway", sans-serif;
 }
